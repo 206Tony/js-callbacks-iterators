@@ -8,3 +8,8 @@ var numbers = [1, 56, 2, 4, 1, 99, 3, 5];
 // via multiplication
 
 
+var sum = numbers.reduce(function(acc, current) {
+    return acc * current;
+});
+
+console.log(sum);

@@ -1,5 +1,5 @@
 var phoneBook = [
-  {Abe: "111-111-1111"},
+   {Abe: "111-111-1111"},
    {Bob: "222-222-2222"},
    {Cam: "333-333-3333"},
    {Dan: "444-444-4444"},
@@ -30,4 +30,15 @@ var phoneBook = [
 // Take the phonebook above and use map to return a new phonebook that includes a country-code that matches the rest of the phone number.
 // For example, the 0th element of the new array should be {Abe: "1-111-111-1111"}
 
-//Your code here
+var newPhoneBook = phoneBook.map(function(person) {
+  for (var key in person) {
+  return {[key]: person[key][0] + "-" + person[key]};
+  }
+});
+console.log(newPhoneBook);
+
+
+
+
+
+
